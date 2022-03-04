@@ -1,0 +1,331 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Avenir Next Demi';
+	src: url("../fonts/AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+	font-family: 'Avenir Next Medium';
+	src: url("../fonts/AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+	font-family: 'Avenir Next MediumIt';
+	src: url("../fonts/AvenirNextLTPro-MediumIt.otf");
+}
+
+body {
+	background-color: #111514;
+}
+
+.zajednicki {
+	display: flex;
+	overflow: auto;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #111514;
+}
+
+.lijeva-strana {
+	//max-width: 450px;
+	//max-height: 782px;
+	padding: 50px;
+	background-color: #1F2322;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+	border-radius: 7px;
+}
+
+.text {
+	font-family: "Avenir Next Medium";
+	color: #F2F2F7;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.naslov {
+	font-family: "Avenir Next Demi";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 36px;
+	color: #F2F2F7;
+}
+
+.podvuceno {
+	width: 30px;
+	padding-bottom: 9px;
+	border-bottom: 4px solid #80694D;
+}
+
+.btn-prikazi {
+	background-color: #1F2322;
+	background-image: url("../img/btn.svg");
+	background-position: center;
+	background-size: cover;
+	border: 0;
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 27px;
+	float: right;
+}
+
+.unos-podataka {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: auto 95px;
+	grid-template-rows: 29px 40px 44px 40px 80px;
+	grid-template-areas: 
+		"label1 label1"
+		"input1 valuta1"
+		"label2 label2"
+		"input2 valuta2"
+		"btn btn";
+	border-bottom: 2px solid #272C2A;
+}
+
+#lbl-cijena {
+	padding-left: 7px;
+	grid-area: label1;
+	line-height: 19px;
+}
+
+#input-cijena {
+	grid-area: input1;
+}
+				
+#valuta-cijena {
+	grid-area: valuta1;
+}
+
+#lbl-postarina {
+	padding-left: 7px;
+	grid-area: label2;
+	line-height: 44px;
+}		
+
+#input-postarina {
+	grid-area: input2;
+}
+
+#valuta-postarina {
+	grid-area: valuta2;
+}	
+
+#btn-izracunaj {
+	grid-area: btn;
+}
+
+input[type=text] {
+	font-family: "Avenir Next Demi";
+	border-radius: 7px;
+	//max-width: 255px;
+	background-color: #272C2A;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: #F2F2F7;
+	outline: none;
+	padding-left: 14px;
+	border: 0;
+}
+
+select {
+	//max-width: 80px;
+	margin-left: 15px;
+	background: #272C2A;
+	border-radius: 7px;
+	font-family: "Avenir Next Demi";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	color: #F2F2F7;
+	outline: none;
+	border: 0;
+	padding-left: 7px;
+}
+
+select option {
+	font-family: "Avenir Next Demi";
+	background: #272C2A;
+	font-weight: 600;
+	outline: none;
+	padding-left: 7px;
+}
+
+input:focus, select:focus{
+    outline: none;
+}
+
+.text-zagrade {
+	color: #636366;
+	font-family: "Avenir Next MediumIt";
+}
+
+#btn-izracunaj {
+	font-family: "Avenir Next Medium";
+	width: 100%;
+	height: 40px;
+	background: #80694D;
+	border-radius: 7px;
+	margin-top: 20px;
+	line-height: 19px;
+}
+
+#btn-izracunaj:hover {
+	cursor: pointer;
+	transition: .4s linear;
+	border: 2px solid #F2F2F7;
+}
+
+
+.rezultat {
+	display: grid;
+	grid-template-columns: auto 85px 85px 95px;
+	grid-template-rows: 50px 65px 2px 74px 2px 126px 2px 59px 2px;
+	grid-template-areas:
+			"lbl1 lbl1 lbl1 lbl1"
+			"kon-cijena kon-cijena kon-cijena bam"
+			"sep1 sep1 sep1 sep1"
+			"lbl2 lbl2 cijena-sa-postarinom cijena-sa-postarinom"
+			"sep2 sep2 sep2 sep2"
+			"lijeva-strana lijeva-strana desna-strana desna-strana"
+			"sep3 sep3 sep3 sep3"
+			"lbl3 lbl3 konacan-iznos konacan-iznos"
+			"sep4 sep4 sep4 sep4";
+}
+
+.text1 {
+	font-family: "Avenir Next Medium";
+	color: #8E8E93;
+	font-weight: 500;
+	font-size: 16px;
+	font-style: normal;
+}
+
+#lbl1 {
+	font-family: "Avenir Next Demi";
+	grid-area: lbl1;
+	margin-top: 20px;
+	margin-left: 7px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 113%;
+	color: #F2F2F7;
+}
+
+#kon-cij {
+	grid-area: kon-cijena;
+	height: 40px;
+	padding-left: 14px;
+	background: #272C2A;
+	border-radius: 7px;
+	font-family: "Avenir Next Demi";
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 40px;
+	color: #F2F2F7;
+}
+
+#bam {
+	grid-area: bam;
+	width: 80px;
+	height: 40px;
+	border-radius: 7px;
+	margin-left: 15px;
+	background: #272C2A;
+	text-align: center;
+	font-family: "Avenir Next Demi";
+	text-transform: uppercase;
+	line-height: 40px;
+	color: #F2F2F7;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.separator {
+	height: 2px;
+	width: 100%;
+	background-color: #272C2A;
+}
+
+#separator1 {
+	grid-area: sep1;
+}
+
+#separator2 {
+	grid-area: sep2;
+}
+
+#separator3 {
+	grid-area: sep3;
+}
+
+#separator4 {
+	grid-area: sep4;
+}
+
+#lbl2 {
+	grid-area: lbl2;
+	margin-top: 20px;
+	margin-left: 7px;
+	line-height: 19px;
+}
+
+
+
+#cijena-sa-postarinom {
+	grid-area: cijena-sa-postarinom;
+	margin-top: 22px;
+	line-height: 19px;
+	padding-right: 7px;
+	text-align: right;
+}
+
+#lijeva-strana {
+	grid-area: lijeva-strana;
+	margin-top: 20px;
+	padding-left: 7px;
+	line-height: 27px;
+}
+
+#lijeva-strana span {
+	font-size: 12px;
+	color: #636366;
+	text-transform: uppercase;
+}
+
+#desna-strana {
+	grid-area: desna-strana;
+	margin-top: 20px;
+	padding-right: 7px;
+	line-height: 27px;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+#lbl3 {
+	grid-area: lbl3;
+	margin-top: 20px;
+	padding-left: 7px;
+	line-height: 19px;
+}
+
+#konacan-iznos {
+	grid-area: konacan-iznos;
+	margin-top: 20px;
+	padding-right: 7px;
+	line-height: 19px;
+	text-align: right;
+}
+
+
+
